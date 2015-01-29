@@ -20,5 +20,8 @@
   "repository": {
     "type": "git",
     "url": "git://github.com/gopilot/event-base.git"
+  },
+  "devDependencies": {
+    "gulp": "^3.5.6"
   }
 }
