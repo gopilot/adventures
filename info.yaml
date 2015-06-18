@@ -1,27 +1,20 @@
 title: PilotPhilly
 city: Philadelphia
 event_id: 544eebe0f92f0c00079ead20
-price: 20.00
+price: 0
 date:
-    display: January 30-31
+    display: August 4, 9a-5p
 location:
-    name: UPenn, Ware College House
+    name: Kistler Library @ Rosemont College
 sponsor_doc: /sponsorship.pdf
-hours_long: 24
+hours_long: 8
 schedule:
-    4:00pm: Registration Opens
-    5:00pm: Kickoff ceremony
-    7:30pm: Dinner
-    12:00am: Midnight Ice Cream; Raffle
-    3:00am: Early Snack
-    8:30am: Breakfast
-    12:00pm: Lunch
-    3:30pm: Coding Ends
-    3:45pm: Demos
-    5:30pm: Judging and Awards
     6:00pm: Event Ends
-analytics: UA-43652846-3
+analytics: UA-43652846-4
 facebook_event: https://www.facebook.com/events/827141887330633/
 share_url: http://philly.gopilot.org/
-tweet_text: "I'm going to #PilotPhilly on January 30-31! You should join me: "
-google_maps: "https://www.google.com/maps/place/Ware+College+House,+University+of+Pennsylvania,+Philadelphia,+PA"
+tweet_text: "I'm going to #PilotPhilly on August 4! You should join me: "
+google_maps: "https://www.google.com/maps/place/Rosemont+College/@40.0347733,-75.3325294,15z"
+sections:
+    schedule: false
+    sponsors: false

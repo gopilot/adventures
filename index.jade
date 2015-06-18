@@ -78,7 +78,7 @@ html
                     .typ-larger
                         p Ever wanted to build a website or an app?
                         p #{title} will help you learn how to create real products in one action-packed & incredibly fun #{hours_long} hour event.
-                    p: a.button.large.js-register.disabled Registration has ended
+                    p: a.button.large.js-register.disabled Registration not open yet!
                     p
                         a.action_link(href=sponsor_doc) Want to sponsor? >
                         a.action_link(href="/mentors.html") Want to mentor? > 
@@ -86,8 +86,10 @@ html
             .row
                 nav.box.span-7.align-top.mobile-full
                     a(href="#about") About
-                    a(href="#sponsors") Sponsors
-                    a(href="#schedule") Schedule
+                    if sections.sponsors 
+                        a(href="#sponsors") Sponsors
+                    if sections.schedule 
+                        a(href="#schedule") Schedule
                     a(href="#faq") FAQ
                 .box.copy.slate.span-5.mobile-full
                     p “I came to this event not knowing what to expect. By the end I had a new group of friends and an end product that I never thought possible, let alone able to be done in just a few hours.” 
@@ -103,10 +105,6 @@ html
                 a(href="#{google_maps}", target="_blank") 
                     p= location.name
 
-            li
-                h6 Cost
-                p $20
-
         .section
             .box.copy.left.white.span-12
                 .typ-large
@@ -121,30 +119,32 @@ html
                     p Through this process students learn how to think creatively, pitch and demo their projects, and more technical skills like how to code and design. Most importantly, they learn how to learn.
 
 
-        .section.sponsors.align-corners#sponsors
-            .box.title.blue.span-3
-                h4 Sponsors
+        if sections.sponsors
+            .section.sponsors.align-corners#sponsors
+                .box.title.blue.span-3
+                    h4 Sponsors
 
-            .box.white.span-9.mobile-full
-                .sponsors-row
-                    .span-6.mobile-6.push-3
-                        a(href="http://www.upenn.edu/"): img(src="img/upenn.png")
-                .sponsors-row
-                    .span-6.mobile-6.push-3
-                        a(href="http://www.sfs.upenn.edu/mayors-scholarship/"): img(src="img/mayorscholar.png")
-                .sponsors-row
-                    .span-6.mobile-6.push-3
-                        a(href="http://www.sig.com/"): img(src="img/sig.jpg")
+                .box.white.span-9.mobile-full
+                    .sponsors-row
+                        .span-6.mobile-6.push-3
+                            a(href="http://www.upenn.edu/"): img(src="img/upenn.png")
+                    .sponsors-row
+                        .span-6.mobile-6.push-3
+                            a(href="http://www.sfs.upenn.edu/mayors-scholarship/"): img(src="img/mayorscholar.png")
+                    .sponsors-row
+                        .span-6.mobile-6.push-3
+                            a(href="http://www.sig.com/"): img(src="img/sig.jpg")
         
-        .section.schedule.large#schedule
-            .box.title.blue.span-3
-                h4 Schedule
+        if sections.schedule
+            .section.schedule.large#schedule
+                .box.title.blue.span-3
+                    h4 Schedule
 
-            each description, time in schedule
-                .row
-                    .box.span-3.typ-right
-                        h6= time
-                    .box.span-9= description
+                each description, time in schedule
+                    .row
+                        .box.span-3.typ-right
+                            h6= time
+                        .box.span-9= description
 
 
         .section.align-corners.faq#faq
@@ -159,8 +159,9 @@ html
                 h5 Who can participate?
                 p Pilot events are for all high school students! Coding experience is not required. You aren't required to have ever built an app before; we will have workshops to help you ramp up quickly. You can come with a team or come alone - there will be a place for you.
 
-                h5 Why does it cost $20?
-                p The $20 registration fee is only to help cover a small portion of the event's expenses, including food, snacks, the location, and more. However, we don't want cost to prevent anyone from coming, so if the $20 is a problem, please send us an email at <a href="mailto:fly@gopilot.org">fly@gopilot.org</a> so we can waive the fee.
+                if price != 0
+                    h5 Why does it cost #{price}?
+                    p The $#{price} registration fee is only to help cover a small portion of the event's expenses, including food, snacks, the location, and more. However, we don't want cost to prevent anyone from coming, so if the $#{price} is a problem, please send us an email at <a href="mailto:fly@gopilot.org">fly@gopilot.org</a> so we can waive the fee.
 
                 h5 What should I bring?
                 p Laptop and charger, extension cord, cellphone and charger, photo ID, and whatever else you need to build your project.
