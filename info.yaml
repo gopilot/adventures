@@ -3,11 +3,11 @@ city: Philadelphia
 event_id: 544eebe0f92f0c00079ead20
 price: 0
 date:
-    display: August 4, 9a-5p
+    display: August 4, 9a-9p
 location:
     name: Kistler Library @ Rosemont College
 sponsor_doc: /sponsorship.pdf
-hours_long: 8
+hours_long: 12
 schedule:
     6:00pm: Event Ends
 analytics: UA-43652846-4
